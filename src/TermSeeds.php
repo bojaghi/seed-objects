@@ -23,13 +23,13 @@ class TermSeeds extends Seeds
             $name     = $item['name'] ?? '';
             $slug     = $item['slug'] ?? '';
 
-            if (!$taxonomy || !$name || term_exists($taxonomy, $name)) {
+            if (!$taxonomy || !$name || term_exists($slug, $taxonomy)) {
                 continue;
             }
 
             // convert 'parent' slug to term_id
-            if (isset($items['parent']) && !is_int($items['parent'])) {
-                $pt     = get_term_by('slug', $items['parent'], $taxonomy);
+            if (isset($item['parent']) && !is_int($item['parent'])) {
+                $pt     = get_term_by('slug', $item['parent'], $taxonomy);
                 $parent = $pt instanceof WP_Term ? $pt->term_id : 0;
             } else {
                 $parent = 0;
