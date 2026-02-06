@@ -4,7 +4,7 @@ namespace Bojaghi\SeedObjects;
 
 use Bojaghi\Helper\Helper;
 
-abstract class Seeds
+abstract class Seed
 {
     protected array $items;
 

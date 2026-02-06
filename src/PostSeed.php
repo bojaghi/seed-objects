@@ -12,7 +12,7 @@ use WP_Query;
  *
  * @see wp_insert_post()
  */
-class PostSeeds extends Seeds
+class PostSeed extends Seed
 {
     public function add(): void
     {

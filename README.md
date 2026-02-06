@@ -9,9 +9,9 @@ See example below:
 ```php
 <?php
 
-use Bojaghi\SeedObjects\SeedsObjects;
+use Bojaghi\SeedObjects\SeedObjects;
 
-$seedObjects = new SeedsObjects(
+$seedObjects = new SeedObjects(
     [
         'isPlugin'             => true,  // 'true' for plugins, 'false' for themes.
         'removeOnDeactivation' => false, // 'true' if you want to delete all seed objects after the deactivation.

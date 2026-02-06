@@ -2,15 +2,15 @@
 
 namespace Bojaghi\SeedObjects\Tests;
 
-use Bojaghi\SeedObjects\CommentSeeds;
+use Bojaghi\SeedObjects\CommentSeed;
 use WP_Comment;
 use WP_UnitTestCase;
 
-class TestCommentSeeds extends WP_UnitTestCase
+class TestCommentSeed extends WP_UnitTestCase
 {
     public function testAddRemove(): void
     {
-        $seeds = new CommentSeeds(
+        $seeds = new CommentSeed(
             [
                 [
                     'comment_author'       => 'tester1',
@@ -32,7 +32,7 @@ class TestCommentSeeds extends WP_UnitTestCase
 
         $comments = get_comments(
             [
-                'type'    => CommentSeeds::COMMENT_TYPE,
+                'type'    => CommentSeed::COMMENT_TYPE,
                 'orderby' => 'comment_ID',
                 'order'   => 'ASC',
             ],
@@ -54,7 +54,7 @@ class TestCommentSeeds extends WP_UnitTestCase
 
         $comments = get_comments(
             [
-                'type'    => CommentSeeds::COMMENT_TYPE,
+                'type'    => CommentSeed::COMMENT_TYPE,
                 'orderby' => 'comment_ID',
                 'order'   => 'ASC',
             ],

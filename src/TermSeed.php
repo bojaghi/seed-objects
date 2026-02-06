@@ -14,7 +14,7 @@ use WP_Term;
  *
  * @see wp_insert_term()
  */
-class TermSeeds extends Seeds
+class TermSeed extends Seed
 {
     public function add(): void
     {

@@ -9,7 +9,7 @@ namespace Bojaghi\SeedObjects;
  *
  * @see wp_insert_user()
  */
-class UserSeeds extends Seeds
+class UserSeed extends Seed
 {
     public function add(): void
     {

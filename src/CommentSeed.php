@@ -16,7 +16,7 @@ use Bojaghi\Helper\Helper;
  *
  * @see wp_insert_comment()
  */
-class CommentSeeds extends Seeds
+class CommentSeed extends Seed
 {
     public const COMMENT_TYPE = '_seed_comment';
 

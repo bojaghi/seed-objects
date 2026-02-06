@@ -2,11 +2,11 @@
 
 namespace Bojaghi\SeedObjects\Tests;
 
-use Bojaghi\SeedObjects\PostSeeds;
+use Bojaghi\SeedObjects\PostSeed;
 use WP_Post;
 use WP_UnitTestCase;
 
-class TestPostSeeds extends WP_UnitTestCase
+class TestPostSeed extends WP_UnitTestCase
 {
     public function testAddRemove()
     {
@@ -35,7 +35,7 @@ class TestPostSeeds extends WP_UnitTestCase
             ],
         ];
 
-        $seeds = new PostSeeds($items);
+        $seeds = new PostSeed($items);
 
         // Test add()
         $seeds->add();

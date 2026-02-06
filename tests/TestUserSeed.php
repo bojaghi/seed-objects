@@ -2,11 +2,11 @@
 
 namespace Bojaghi\SeedObjects\Tests;
 
-use Bojaghi\SeedObjects\UserSeeds;
+use Bojaghi\SeedObjects\UserSeed;
 use WP_UnitTestCase;
 use WP_User;
 
-class TestUserSeeds extends WP_UnitTestCase
+class TestUserSeed extends WP_UnitTestCase
 {
     public function testAddRemove(): void
     {
@@ -29,7 +29,7 @@ class TestUserSeeds extends WP_UnitTestCase
             ],
         ];
 
-        $seeds = new UserSeeds($items);
+        $seeds = new UserSeed($items);
 
         // Test add()
         $seeds->add();

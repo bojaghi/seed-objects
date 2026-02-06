@@ -5,7 +5,7 @@ namespace Bojaghi\SeedObjects;
 use Bojaghi\Contract\Module;
 use Bojaghi\Helper\Helper;
 
-class SeedsObjects implements Module
+class SeedObjects implements Module
 {
     private string|array $comments;
     private string|array $posts;
@@ -69,22 +69,22 @@ class SeedsObjects implements Module
     public function activation(): void
     {
         if ($this->comments) {
-            $seeds = new CommentSeeds($this->comments);
+            $seeds = new CommentSeed($this->comments);
             $seeds->add();
         }
 
         if ($this->posts) {
-            $seeds = new PostSeeds($this->posts);
+            $seeds = new PostSeed($this->posts);
             $seeds->add();
         }
 
         if ($this->terms) {
-            $seeds = new TermSeeds($this->terms);
+            $seeds = new TermSeed($this->terms);
             $seeds->add();
         }
 
         if ($this->users) {
-            $seeds = new UserSeeds($this->users);
+            $seeds = new UserSeed($this->users);
             $seeds->add();
         }
     }
@@ -92,22 +92,22 @@ class SeedsObjects implements Module
     public function deactivation(): void
     {
         if ($this->comments) {
-            $seeds = new CommentSeeds($this->comments);
+            $seeds = new CommentSeed($this->comments);
             $seeds->remove();
         }
 
         if ($this->posts) {
-            $seeds = new PostSeeds($this->posts);
+            $seeds = new PostSeed($this->posts);
             $seeds->remove();
         }
 
         if ($this->terms) {
-            $seeds = new TermSeeds($this->terms);
+            $seeds = new TermSeed($this->terms);
             $seeds->remove();
         }
 
         if ($this->users) {
-            $seeds = new UserSeeds($this->users);
+            $seeds = new UserSeed($this->users);
             $seeds->remove();
         }
     }
